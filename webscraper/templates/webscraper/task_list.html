@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Market Intelligence Reports</h2>
+        <a href="{% url 'webscraper:new_task' %}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> New Analysis
+        </a>
+    </div>
+    
+    <div class="row">
+        {% for task in tasks %}
+        <div class="col-md-6 mb-3">
+            <div class="card h-100 task-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ task.keywords }}</h5>
+                    <div class="status-indicator mb-3">
+                        {% if task.status == 'completed' %}
+                        <span class="badge bg-success">
+                            <i class="fas fa-check"></i> Completed
+                        </span>
+                        {% elif task.status == 'pending' %}
+                        <span class="badge bg-warning">
+                            <i class="fas fa-spinner fa-spin"></i> Processing
+                        </span>
+                        {% else %}
+                        <span class="badge bg-danger">
+                            <i class="fas fa-exclamation-triangle"></i> Failed
+                        </span>
+                        {% endif %}
+                    </div>
+                    <p class="card-text">
+                        <small class="text-muted">
+                            <i class="far fa-clock"></i> Started {{ task.created_at|timesince }} ago
+                        </small>
+                    </p>
+                    <a href="{% url 'webscraper:task_detail' task.id %}" class="btn btn-outline-primary">
+                        View Report
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i> No market analysis reports yet. Start your first analysis!
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+    }
+
+    .task-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        overflow: hidden;
+    }
+
+    .task-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        position: relative;
+    }
+
+    .card-title {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        padding-right: 80px;
+    }
+
+    .status-indicator {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1;
+    }
+
+    .badge {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .bg-success {
+        background: linear-gradient(45deg, #28a745, #20c997) !important;
+    }
+
+    .bg-warning {
+        background: linear-gradient(45deg, #ffc107, #ff9800) !important;
+    }
+
+    .bg-danger {
+        background: linear-gradient(45deg, #dc3545, #c82333) !important;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background: linear-gradient(45deg, #007bff, #0056b3);
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    }
+
+    .btn-outline-primary {
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+        background: linear-gradient(45deg, #007bff, #0056b3);
+        border-color: transparent;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+        font-size: 0.875rem;
+    }
+
+    .alert {
+        border: none;
+        border-radius: 15px;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #2c3e50;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 4px;
+        background: linear-gradient(45deg, #007bff, #00ff88);
+        border-radius: 2px;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .fa-spinner {
+        animation: spin 1s linear infinite;
+    }
+</style>
+{% endblock %} 

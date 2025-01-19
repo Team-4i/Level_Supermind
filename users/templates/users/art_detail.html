@@ -1,0 +1,489 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="card custom-card">
+        <!-- Header Section -->
+        <div class="card-header">
+            <div class="header-content">
+                <div class="title-section">
+                    <i class='bx bx-analyse'></i>
+                    <h2 class="card-title">Analysis Request Details</h2>
+                </div>
+                <div class="header-actions">
+                    <a href="{% url 'users:art_edit' art.pk %}" class="btn-edit">
+                        <i class='bx bx-edit'></i> Edit Request
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- Query Section -->
+            <div class="detail-section query-section">
+                <div class="section-header">
+                    <i class='bx bx-search-alt'></i>
+                    <h3>Analysis Query</h3>
+                </div>
+                <div class="query-content">
+                    <p>{{ art.analysis_query }}</p>
+                </div>
+            </div>
+            
+            <!-- Analysis Type Selector -->
+            <div class="analysis-selector">
+                <button class="analysis-btn active" data-target="yt-analysis">
+                    <i class='bx bxl-youtube'></i> YouTube Analysis
+                </button>
+                <button class="analysis-btn" data-target="web-analysis">
+                    <i class='bx bx-globe'></i> Web Analysis
+                </button>
+            </div>
+
+            <!-- YouTube Analysis Section -->
+            <div id="yt-analysis" class="analysis-content active">
+                <!-- Keywords Section -->
+                {% if art.keywords %}
+                <div class="detail-section">
+                    <h3><i class='bx bx-target-lock'></i> Generated Keywords</h3>
+                    <div class="keywords-grid">
+                        {% for keyword in art.keywords %}
+                            <div class="keyword-badge">🎯 {{ keyword }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <!-- Content Section -->
+                {% if art.content %}
+                <div class="detail-section">
+                    <h3><i class='bx bx-video'></i> Found Ad Content</h3>
+                    <div class="videos-grid">
+                        {% for video in art.content.videos %}
+                        <div class="video-card">
+                            <div class="video-header">
+                                <h4>{{ video.video_data.title }}</h4>
+                                <span class="keyword-tag">{{ video.keyword }}</span>
+                            </div>
+                            <div class="video-stats">
+                                <span><i class='bx bx-show'></i> {{ video.video_data.view_count|default:"0" }}</span>
+                                <span><i class='bx bx-like'></i> {{ video.video_data.like_count|default:"0" }}</span>
+                            </div>
+                            <p class="video-description">{{ video.video_data.description|truncatechars:200 }}</p>
+                            <a href="https://www.youtube.com/watch?v={{ video.video_data.video_id }}" target="_blank" class="btn-watch">
+                                <i class='bx bx-play'></i> Watch Video
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <!-- YouTube Analysis Result -->
+                {% if art.analysis_result %}
+                <div class="detail-section">
+                    <h3><i class='bx bx-line-chart'></i> YouTube Analysis Result</h3>
+                    <pre class="analysis-result">{{ art.analysis_result }}</pre>
+                </div>
+                {% else %}
+                <div class="status-alert">
+                    <i class='bx bx-loader-alt'></i> No YouTube analysis results yet.
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Web Analysis Section -->
+            <div id="web-analysis" class="analysis-content">
+                {% if art.web_analysis_result %}
+                <div class="detail-section">
+                    <h3><i class='bx bx-globe'></i> Web Analysis Result</h3>
+                    <pre class="analysis-result">{{ art.web_analysis_result }}</pre>
+                </div>
+                {% else %}
+                <div class="status-alert">
+                    <i class='bx bx-loader-alt'></i> No web analysis results yet.
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="action-buttons">
+                <a href="{% url 'users:art_list' %}" class="btn-back">
+                    <i class='bx bx-arrow-back'></i> Back to List
+                </a>
+                <a href="{% url 'ytscraper:scraper_home' %}" class="btn-analyze">
+                    <i class='bx bx-analyse'></i> Analyze in Scraper
+                </a>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <div class="footer-info">
+                <span><i class='bx bx-calendar'></i> Created: {{ art.created_at|date:"F j, Y, g:i a" }}</span>
+                <span><i class='bx bx-refresh'></i> Last Updated: {{ art.updated_at|date:"F j, Y, g:i a" }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+:root {
+    --primary: #2563eb;
+    --secondary: #3c91e6;
+    --success: #059669;
+    --light: #f1f5f9;
+    --dark: #1e293b;
+    --border: #e2e8f0;
+    --grey: #f8fafc;
+}
+
+.container-fluid {
+    padding: 2rem;
+    background: var(--grey);
+    min-height: calc(100vh - 56px);
+}
+
+.custom-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    color: white;
+    padding: 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-section i {
+    font-size: 2rem;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.btn-edit {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+}
+
+.btn-edit:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.detail-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease;
+}
+
+.detail-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.section-header i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--dark);
+}
+
+.keywords-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.keyword-badge {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+    font-weight: 500;
+}
+
+.keyword-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.video-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.video-header {
+    margin-bottom: 1rem;
+}
+
+.video-header h4 {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.keyword-tag {
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.video-stats {
+    display: flex;
+    gap: 1rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.video-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.video-description {
+    color: #64748b;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.btn-watch {
+    background: #ef4444;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-watch:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.analysis-result {
+    background: var(--grey);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-family: 'Monaco', monospace;
+    line-height: 1.6;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+}
+
+.status-alert {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #0369a1;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-back, .btn-analyze {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-back {
+    background: var(--grey);
+    color: var(--dark);
+}
+
+.btn-analyze {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    color: white;
+}
+
+.btn-back:hover, .btn-analyze:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.card-footer {
+    background: var(--grey);
+    padding: 1.5rem 2rem;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.footer-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.analysis-selector {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.analysis-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: var(--grey);
+    color: var(--dark);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.analysis-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.analysis-content {
+    display: none;
+}
+
+.analysis-content.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 1rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-back, .btn-analyze {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const analysisButtons = document.querySelectorAll('.analysis-btn');
+    const analysisContents = document.querySelectorAll('.analysis-content');
+
+    analysisButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons and contents
+            analysisButtons.forEach(btn => btn.classList.remove('active'));
+            analysisContents.forEach(content => content.classList.remove('active'));
+
+            // Add active class to clicked button and corresponding content
+            this.classList.add('active');
+            const targetId = this.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+});
+</script>
+{% endblock %} 

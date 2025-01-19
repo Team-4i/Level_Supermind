@@ -1,0 +1,927 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="scraper-container">
+    <div class="scraper-header">
+        <h1>Indian Brand Ad Research Tool</h1>
+        <p class="subtitle">Analyze and understand Indian advertising trends for your brand</p>
+    </div>
+
+    <div class="scraper-tabs">
+        <ul class="nav nav-pills" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="research-tab" data-toggle="tab" href="#research" role="tab">
+                    <i class='bx bx-search-alt'></i> Indian Ad Research
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content" id="myTabContent">
+        <!-- Indian Ad Research Tab -->
+        <div class="tab-pane fade show active" id="research" role="tabpanel">
+            <div class="research-form">
+                <div class="form-card">
+                    <!-- Add dropdown for existing queries -->
+                    <div class="form-group">
+                        <label for="existingQuery">
+                            <i class='bx bx-list-ul'></i> Select Existing Query (Optional):
+                        </label>
+                        <select class="form-control" id="existingQuery">
+                            <option value="">-- Create new query or select existing --</option>
+                            {% for query in user_queries %}
+                                <option value="{{ query.analysis_query }}" data-id="{{ query.id }}">
+                                    {{ query.analysis_query|truncatechars:100 }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="hidden" id="queryId" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription">
+                            <i class='bx bx-pencil'></i> Describe your product or brand:
+                        </label>
+                        <textarea class="form-control custom-textarea" id="productDescription" rows="3" 
+                            placeholder="Include: target audience, key features, industry, and Indian market competitors"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="totalVideos">
+                            <i class='bx bx-video'></i> Number of videos to analyze:
+                        </label>
+                        <div class="range-container">
+                            <input type="range" 
+                                   class="form-control-range custom-range" 
+                                   id="totalVideos" 
+                                   min="2" 
+                                   max="50" 
+                                   value="2" 
+                                   step="2">
+                            <span id="rangeValue" class="range-value">2 videos</span>
+                        </div>
+                    </div>
+                    
+                    <button id="searchBtn" class="btn btn-primary search-btn">
+                        <i class='bx bx-search'></i> Find Indian Ad Content
+                    </button>
+                </div>
+
+                <!-- Keep existing results sections -->
+                <div id="keywordsSection" class="result-section" style="display: none;">
+                    <h4><i class='bx bx-target-lock'></i> Generated Keywords</h4>
+                    <div id="keywordsList" class="keywords-grid"></div>
+                </div>
+                
+                <div id="videosSection" class="result-section" style="display: none;">
+                    <h4><i class='bx bx-video-plus'></i> Found Ad Content</h4>
+                    <div id="videosList" class="videos-grid"></div>
+                    <button id="analyzeBtn" class="btn btn-primary analyze-btn mt-3">
+                        <i class='bx bx-line-chart'></i> Analyze All Videos
+                    </button>
+                </div>
+                
+                <div id="analysisSection" class="result-section" style="display: none;">
+                    <h4><i class='bx bx-line-chart'></i> Analysis Results</h4>
+                    <div id="analysisContent" class="analysis-card"></div>
+                    <button id="downloadBtn" class="btn btn-secondary mt-3">
+                        <i class='bx bx-download'></i> Download Analysis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add JavaScript to handle dropdown selection -->
+<script>
+document.getElementById('existingQuery').addEventListener('change', function() {
+    const selectedQuery = this.value;
+    const queryId = this.options[this.selectedIndex].getAttribute('data-id');
+    if (selectedQuery) {
+        document.getElementById('productDescription').value = selectedQuery;
+        document.getElementById('queryId').value = queryId;
+    }
+});
+</script>
+
+<!-- Keep your existing styles -->
+<style>
+:root {
+    --primary: #60a5fa;
+    --secondary: #3c91e6;
+    --accent: #60a5fa;
+    --text: #1f2937;
+    --light: #f3f4f6;
+    --dark: #1e293b;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.scraper-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    min-height: calc(100vh - 56px);
+}
+
+.scraper-header {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    color: white;
+}
+
+.scraper-header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.scraper-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-panel {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+/* Query Selection Styling */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+select.form-control, 
+textarea.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+select.form-control:focus,
+textarea.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+/* Range Slider Styling */
+.range-wrapper {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+}
+
+.range-slider {
+    width: 100%;
+    height: 6px;
+    background: var(--light);
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.range-value {
+    text-align: center;
+    font-weight: 500;
+    color: var(--text);
+    margin-top: 0.5rem;
+}
+
+/* Button Styling */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Results Section */
+.results-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Keywords and Videos Grid */
+.keywords-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.keyword-item {
+    background: var(--light);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.keyword-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.video-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Analysis Section */
+.analysis-content {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 12px;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .scraper-container {
+        padding: 1rem;
+    }
+    
+    .scraper-header h1 {
+        font-size: 2rem;
+    }
+    
+    .search-panel {
+        padding: 1.5rem;
+    }
+}
+
+/* Keywords Styling */
+.keyword-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.keyword-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.keyword-icon {
+    font-size: 1.5rem;
+}
+
+.keyword-text {
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+}
+
+.keyword-badge {
+    background: var(--light);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Video Group Styling */
+.video-group {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+}
+
+.video-group-header {
+    background: var(--light);
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.group-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.group-title h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+.video-count {
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* Video Card Styling */
+.video-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.video-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.video-details {
+    padding: 1.25rem;
+}
+
+.video-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.video-description {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.video-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+.video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.video-link:hover {
+    background: var(--secondary);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .group-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* Analysis Results Styling */
+.analysis-wrapper {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.analysis-section {
+    padding: 2rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.section-header i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.section-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+.analysis-content {
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+.analysis-subtitle {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.analysis-subtitle:first-child {
+    margin-top: 0;
+}
+
+.analysis-text {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.analysis-point {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    align-items: flex-start;
+}
+
+.analysis-point i {
+    color: var(--primary);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.analysis-point p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .analysis-section {
+        padding: 1.5rem;
+    }
+    
+    .section-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .analysis-subtitle {
+        font-size: 1.1rem;
+    }
+}
+</style>
+
+<!-- Keep your existing JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get CSRF token from cookie
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    // Search functionality
+    document.getElementById('searchBtn').addEventListener('click', async function() {
+        const description = document.getElementById('productDescription').value;
+        const totalVideos = document.getElementById('totalVideos').value;
+        
+        try {
+            const response = await fetch("{% url 'ytscraper:search_ads' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    product_description: description,
+                    total_videos: totalVideos
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+            
+            // Display keywords
+            displayKeywords(data.keywords);
+            
+            // Display videos
+            displayVideos(data.videos);
+            
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while searching for ads. Please try again.');
+        }
+    });
+    
+    // Analysis functionality
+    document.getElementById('analyzeBtn').addEventListener('click', async function() {
+        const queryId = document.getElementById('queryId').value;
+        if (!queryId) {
+            alert('Please select an existing query first');
+            return;
+        }
+        
+        try {
+            const response = await fetch(`/ytscraper/analyze-query/${queryId}/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            if (data.status === 'success') {
+                // Display analysis in the same page
+                displayAnalysis(data.result);
+                // Add a "View Details" button after showing analysis
+                document.getElementById('analysisContent').insertAdjacentHTML('afterend', `
+                    <a href="/users/art/${queryId}/" class="btn btn-secondary mt-3">
+                        <i class='bx bx-detail'></i> View Full Details
+                    </a>
+                `);
+            } else {
+                alert(data.message);
+            }
+            
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while analyzing videos. Please try again.');
+        }
+    });
+    
+    // Single video analysis
+    document.getElementById('analyzeVideoBtn').addEventListener('click', async function() {
+        const url = document.getElementById('youtubeUrl').value;
+        
+        try {
+            const response = await fetch("{% url 'ytscraper:analyze_single_video' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    youtube_url: url
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            displayVideoAnalysis(data);
+            
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while analyzing the video. Please try again.');
+        }
+    });
+    
+    // Download functionality
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        window.location.href = "{% url 'ytscraper:download_analysis' %}";
+    });
+});
+
+function displayKeywords(keywords) {
+    const section = document.getElementById('keywordsSection');
+    const list = document.getElementById('keywordsList');
+    
+    list.innerHTML = keywords.map(keyword => `
+        <div class="keyword-card">
+            <div class="keyword-icon">🎯</div>
+            <div class="keyword-text">${keyword}</div>
+            <div class="keyword-badge">Keyword</div>
+        </div>
+    `).join('');
+    
+    section.style.display = 'block';
+}
+
+function displayVideos(videos) {
+    const section = document.getElementById('videosSection');
+    const list = document.getElementById('videosList');
+    
+    // Group videos by keyword
+    const groupedVideos = {};
+    videos.forEach(video => {
+        if (!groupedVideos[video.keyword_used]) {
+            groupedVideos[video.keyword_used] = [];
+        }
+        groupedVideos[video.keyword_used].push(video);
+    });
+    
+    list.innerHTML = Object.entries(groupedVideos).map(([keyword, videos]) => `
+        <div class="video-group">
+            <div class="video-group-header">
+                <div class="group-title">
+                    <i class='bx bx-play-circle'></i>
+                    <h3>Ads for: ${keyword}</h3>
+                    <span class="video-count">${videos.length} videos</span>
+                </div>
+            </div>
+            <div class="video-grid">
+                ${videos.map(video => `
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/${video.video_id}/mqdefault.jpg" alt="Video thumbnail">
+                            <span class="video-duration">Ad</span>
+                        </div>
+                        <div class="video-details">
+                            <h4 class="video-title">${video.title}</h4>
+                            <p class="video-description">${video.description.substring(0, 100)}...</p>
+                            <div class="video-stats">
+                                <div class="stat">
+                                    <i class='bx bx-show'></i>
+                                    <span>${video.view_count.toLocaleString()}</span>
+                                </div>
+                                <div class="stat">
+                                    <i class='bx bx-like'></i>
+                                    <span>${video.like_count.toLocaleString()}</span>
+                                </div>
+                            </div>
+                            <a href="${video.url}" target="_blank" class="video-link">
+                                <i class='bx bx-play'></i> Watch Ad
+                            </a>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `).join('');
+    
+    section.style.display = 'block';
+}
+
+function displayAnalysis(analysis) {
+    const section = document.getElementById('analysisSection');
+    const content = document.getElementById('analysisContent');
+    
+    content.innerHTML = `
+        <div class="analysis-wrapper">
+            <div class="analysis-section">
+                <div class="section-header">
+                    <i class='bx bx-analyse'></i>
+                    <h3>Analysis Report</h3>
+                </div>
+                <div class="analysis-content">
+                    ${formatAnalysis(analysis)}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    section.style.display = 'block';
+}
+
+function formatAnalysis(analysis) {
+    // Clean and format the analysis text
+    return analysis.split('\n').map(line => {
+        if (line.includes('Key Insights:') || 
+            line.includes('Engagement Analysis:') || 
+            line.includes('Strategic Recommendations:')) {
+            return `<h4 class="analysis-subtitle">${line}</h4>`;
+        } else if (line.trim().startsWith('-')) {
+            return `<div class="analysis-point">
+                        <i class='bx bx-check-circle'></i>
+                        <p>${line.substring(1).trim()}</p>
+                    </div>`;
+        } else if (line.trim()) {
+            return `<p class="analysis-text">${line}</p>`;
+        }
+        return '';
+    }).join('');
+}
+
+function displayVideoAnalysis(data) {
+    const section = document.getElementById('videoAnalysisSection');
+    
+    // Display video details
+    document.getElementById('videoDetails').innerHTML = `
+        <h4>Video Details</h4>
+        <p>Title: ${data.video_details.title}</p>
+        <p>Views: ${data.video_details.view_count.toLocaleString()}</p>
+        <p>Likes: ${data.video_details.like_count.toLocaleString()}</p>
+        <p>Comments: ${data.video_details.comment_count.toLocaleString()}</p>
+    `;
+    
+    // Display content analysis
+    if (data.content_analysis) {
+        document.getElementById('contentAnalysis').innerHTML = `
+            <h4>Content Analysis</h4>
+            <div>${data.content_analysis}</div>
+        `;
+    }
+    
+    // Display comment analysis
+    if (data.comments) {
+        document.getElementById('commentAnalysis').innerHTML = `
+            <h4>Comment Analysis</h4>
+            <p>Average Comment Sentiment: ${data.avg_sentiment.toFixed(2)}</p>
+            <h5>Top Comments:</h5>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Comment</th>
+                            <th>Likes</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${data.comments.map(comment => `
+                            <tr>
+                                <td>${comment.text}</td>
+                                <td>${comment.likes}</td>
+                                <td>${new Date(comment.publish_date).toLocaleDateString()}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+}
+
+document.getElementById('totalVideos').addEventListener('input', function() {
+    // Ensure the value is always even
+    let value = parseInt(this.value);
+    if (value % 2 !== 0) {
+        value = Math.floor(value / 2) * 2;
+        this.value = value;
+    }
+    // Update the display
+    document.getElementById('rangeValue').textContent = `${value} videos`;
+});
+
+async function searchAds() {
+    const productDescription = document.getElementById('productDescription').value;
+    const totalVideos = parseInt(document.getElementById('totalVideos').value);
+    
+    // Validate total videos is even
+    if (totalVideos % 2 !== 0) {
+        alert('Number of videos must be even');
+        return;
+    }
+    
+    // Rest of your search function...
+}
+</script>
+{% endblock %}

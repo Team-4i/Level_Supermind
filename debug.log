@@ -1,0 +1,1258 @@
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Error in search process: name 'generate_ad_keywords' is not defined
+Internal Server Error: /ytscraper/search-ads/
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Error in search process: name 'generate_ad_keywords' is not defined
+Internal Server Error: /ytscraper/search-ads/
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+C:\Users\yyash\Coding\lsm\ytscraper\urls.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['Amul India TVC', 'Kwality Walls India advertisement', 'Mother Dairy India ad', 'Hindustan Unilever India commercial', 'Vadilal India brand advertisement']
+Processing keyword: Amul India TVC
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error processing video XtXJSX71hhg: name 'check_transcript_availability' is not defined
+Error processing video s3x1HOZuS6E: name 'check_transcript_availability' is not defined
+Error processing video weLf6V3sEOQ: name 'check_transcript_availability' is not defined
+Error processing video Y_I1omigDRU: name 'check_transcript_availability' is not defined
+Processing keyword: Kwality Walls India advertisement
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error processing video s7dbKEMNxLQ: name 'check_transcript_availability' is not defined
+Error processing video 1Voq2nKBZZM: name 'check_transcript_availability' is not defined
+Error processing video XtXJSX71hhg: name 'check_transcript_availability' is not defined
+Error processing video Wk7v6ZHIl8I: name 'check_transcript_availability' is not defined
+Processing keyword: Mother Dairy India ad
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Mother+Dairy+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Error processing video wE7H0Cre16I: name 'check_transcript_availability' is not defined
+Error processing video XYejaGCjJl4: name 'check_transcript_availability' is not defined
+Error processing video hfsw3atqZsc: name 'check_transcript_availability' is not defined
+Error processing video 6qGQCMONvP8: name 'check_transcript_availability' is not defined
+Processing keyword: Hindustan Unilever India commercial
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Hindustan+Unilever+India+commercial&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error processing video AQD0XR20yiE: name 'check_transcript_availability' is not defined
+Error processing video OSb5afmesJQ: name 'check_transcript_availability' is not defined
+Error processing video Rz4cverM4I8: name 'check_transcript_availability' is not defined
+Error processing video izujd5D5NiI: name 'check_transcript_availability' is not defined
+Processing keyword: Vadilal India brand advertisement
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Vadilal+India+brand+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Error processing video 11HoGsdrEJY: name 'check_transcript_availability' is not defined
+Error processing video mYeBWxhXSdo: name 'check_transcript_availability' is not defined
+Error processing video Pq1J7kq1-cA: name 'check_transcript_availability' is not defined
+Error processing video qDhhTF2DMTM: name 'check_transcript_availability' is not defined
+Not Found: /ytscraper/search-ads/
+Generated keywords: ['Kwality Walls India TVC', 'Amul India commercial', 'Mother Dairy India advertisement', 'Cadbury India ad', 'Godrej Dairy India TVC', 'Vadilal India TVC', 'Hindustan Unilever India brand promotion']
+Processing keyword: Kwality Walls India TVC
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error processing video 1Voq2nKBZZM: name 'check_transcript_availability' is not defined
+Error processing video Wk7v6ZHIl8I: name 'check_transcript_availability' is not defined
+Error processing video A-qXYMJVgCA: name 'check_transcript_availability' is not defined
+Error processing video iDBuFPltT08: name 'check_transcript_availability' is not defined
+Processing keyword: Amul India commercial
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+commercial&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error processing video QN7BFBqZ6qo: name 'check_transcript_availability' is not defined
+Error processing video Ww9lnZwQG2Y: name 'check_transcript_availability' is not defined
+Error processing video XtXJSX71hhg: name 'check_transcript_availability' is not defined
+Error processing video s3x1HOZuS6E: name 'check_transcript_availability' is not defined
+Processing keyword: Mother Dairy India advertisement
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Mother+Dairy+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Generated keywords: ['- Amul India ad', '- Keventers India advertisement', '- Kwality Walls India TVC', '- Mother Dairy India commercial', '- Arun Icecreams India brand promotion']
+Processing keyword: - Amul India ad
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Amul+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+
+Error searching videos: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+
+Error processing keyword - Amul India ad: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Error processing keyword Mother Dairy India advertisement: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Processing keyword: - Keventers India advertisement
+Processing keyword: Cadbury India ad
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Keventers+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Cadbury+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Generated keywords: ['Amul India TVC', 'Dairy Milk India advertisement', 'Godrej India ad', 'Parle India commercial', 'Kwality Walls India advertisement', 'Mother Dairy India TVC', 'Kwality Walls Cornetto India ad']
+Processing keyword: Amul India TVC
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Generated keywords: ['Amul India advertisement', 'Kwality Walls India TVC', 'Hindustan Unilever India ad', 'Mother Dairy India commercial', 'Cadbury Dairy Milk India TVC', 'Vadilal India advertisement', 'Nestlé India brand promotion']
+Processing keyword: Amul India advertisement
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: The read operation timed out
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+Error searching videos: The read operation timed out
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+Error processing keyword - Keventers India advertisement: The read operation timed out
+Error processing keyword Cadbury India ad: The read operation timed out
+Processing keyword: - Kwality Walls India TVC
+Processing keyword: Godrej Dairy India TVC
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Kwality+Walls+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Godrej+Dairy+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: The read operation timed out
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+Error processing keyword Amul India TVC: The read operation timed out
+Processing keyword: Dairy Milk India advertisement
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Dairy+Milk+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: The read operation timed out
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+Error processing keyword Amul India advertisement: The read operation timed out
+Processing keyword: Kwality Walls India TVC
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Processing keyword: Vadilal India TVC
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Vadilal+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error processing video 1Voq2nKBZZM: name 'check_transcript_availability' is not defined
+Error processing video Wk7v6ZHIl8I: name 'check_transcript_availability' is not defined
+Error processing video A-qXYMJVgCA: name 'check_transcript_availability' is not defined
+Error processing video iDBuFPltT08: name 'check_transcript_availability' is not defined
+Processing keyword: - Mother Dairy India commercial
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Mother+Dairy+India+commercial&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+
+Error processing keyword - Mother Dairy India commercial: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+Processing keyword: - Arun Icecreams India brand promotion
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Arun+Icecreams+India+brand+promotion&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+
+Error searching videos: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+
+Error processing keyword Kwality Walls India TVC: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Error processing keyword - Arun Icecreams India brand promotion: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2570)
+Processing keyword: Hindustan Unilever India ad
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Hindustan+Unilever+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Not Found: /ytscraper/search-ads/
+Error processing video uAiapBnFsKs: name 'check_transcript_availability' is not defined
+Error processing video ugp1IhxHT48: name 'check_transcript_availability' is not defined
+Error processing video 28UQxte2a2w: name 'check_transcript_availability' is not defined
+Error processing video ZNRSHr3b4uA: name 'check_transcript_availability' is not defined
+Processing keyword: Godrej India ad
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Godrej+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+
+Error processing keyword Hindustan Unilever India ad: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+Processing keyword: Mother Dairy India commercial
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Mother+Dairy+India+commercial&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error processing video qx07CZwMVDM: name 'check_transcript_availability' is not defined
+Error processing video 0GVjNxaTyB4: name 'check_transcript_availability' is not defined
+Error processing video hzNCKIkiTsg: name 'check_transcript_availability' is not defined
+Error processing video q6nCYH9rPcI: name 'check_transcript_availability' is not defined
+Processing keyword: Parle India commercial
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Parle+India+commercial&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Error searching videos: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 185, in search_ad_videos
+    ).execute()
+      ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 923, in execute
+    resp, content = _retry_request(
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 222, in _retry_request
+    raise exception
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\googleapiclient\http.py", line 191, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1724, in request
+    (response, content) = self._request(
+                          ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1444, in _request
+    (response, content) = self._conn_request(conn, request_uri, method, body, headers)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\httplib2\__init__.py", line 1396, in _conn_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Program Files\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+
+Error processing keyword Parle India commercial: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2570)
+Processing keyword: Kwality Walls India advertisement
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"toothpaste","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['Colgate India ad', 'Pepsodent India TVC', 'Dabur Red Paste India commercial', 'Closeup India advertisement', 'Sensodyne India ad']
+Processing keyword: Colgate India ad
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Colgate+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['Amul India TVC', 'Kwality Walls India advertisement', 'HUL ice cream India ad', "Godrej Nature's Basket India commercial", 'Vadilal ice cream India TVC']
+Processing keyword: Amul India TVC
+Attempting YouTube API request for keyword: Amul India TVC (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Amul India TVC
+Error processing video XtXJSX71hhg: name 'check_transcript_availability' is not defined
+Error processing video s3x1HOZuS6E: name 'check_transcript_availability' is not defined
+Error processing video Y_I1omigDRU: name 'check_transcript_availability' is not defined
+Error processing video xNWWBEXXtLE: name 'check_transcript_availability' is not defined
+Processing keyword: Kwality Walls India advertisement
+Attempting YouTube API request for keyword: Kwality Walls India advertisement (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Kwality Walls India advertisement
+Error processing video s7dbKEMNxLQ: name 'check_transcript_availability' is not defined
+Error processing video 1Voq2nKBZZM: name 'check_transcript_availability' is not defined
+Error processing video XtXJSX71hhg: name 'check_transcript_availability' is not defined
+Error processing video Wk7v6ZHIl8I: name 'check_transcript_availability' is not defined
+Processing keyword: HUL ice cream India ad
+Attempting YouTube API request for keyword: HUL ice cream India ad (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=HUL+ice+cream+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: HUL ice cream India ad
+Error processing video uMd8pHjab-M: name 'check_transcript_availability' is not defined
+Error processing video BhNEZMlkJF8: name 'check_transcript_availability' is not defined
+Error processing video 7aEqxo-mP90: name 'check_transcript_availability' is not defined
+Error processing video GmW65dQCzVk: name 'check_transcript_availability' is not defined
+Processing keyword: Godrej Nature's Basket India commercial
+Attempting YouTube API request for keyword: Godrej Nature's Basket India commercial (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Godrej+Nature%27s+Basket+India+commercial&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Godrej Nature's Basket India commercial
+Error processing video nimAZ3LCgUE: name 'check_transcript_availability' is not defined
+Error processing video EmeekalvM9M: name 'check_transcript_availability' is not defined
+Processing keyword: Vadilal ice cream India TVC
+Attempting YouTube API request for keyword: Vadilal ice cream India TVC (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Vadilal+ice+cream+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Vadilal ice cream India TVC
+Error processing video Tm4p-7GOELc: name 'check_transcript_availability' is not defined
+Error processing video 8shRjEikhJ0: name 'check_transcript_availability' is not defined
+Error processing video o1neR4Caop8: name 'check_transcript_availability' is not defined
+Error processing video 0RH9JKRHYnY: name 'check_transcript_availability' is not defined
+Not Found: /ytscraper/search-ads/
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+C:\Users\yyash\Coding\lsm\ytscraper\urls.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /ytscraper/home/
+Not Found: /favicon.ico
+Not Found: /ytscraper/home/
+Not Found: /favicon.ico
+Not Found: /ytscraper/home/
+Not Found: /favicon.ico
+Internal Server Error: /ytscraper/scraper-home/
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 40, in scraper_home
+    return render(request, 'ytscraper/scraper_home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'search_ads' not found. 'search_ads' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+Method Not Allowed: /ytscraper/search-ads/
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /ytscraper/scraper-home/
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 40, in scraper_home
+    return render(request, 'ytscraper/scraper_home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'search_ads' not found. 'search_ads' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+C:\Users\yyash\Coding\lsm\project\urls.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+C:\Users\yyash\Coding\lsm\project\urls.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Internal Server Error: /ytscraper/scraper-home/
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 40, in scraper_home
+    return render(request, 'ytscraper/scraper_home.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\template\base.py", line 586, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 4: 'block'. Looking for one of: endblock.
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['- Kwality Walls India advertisement', '- Amul India TVC', '- Mother Dairy India ad', '- Havmor India commercial', "- Dinshaw's India advertisement"]
+Processing keyword: - Kwality Walls India advertisement
+Attempting YouTube API request for keyword: - Kwality Walls India advertisement (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Kwality+Walls+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: - Kwality Walls India advertisement
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=s7dbKEMNxLQ HTTP/1.1" 200 None
+No transcript available for video s7dbKEMNxLQ: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=s7dbKEMNxLQ! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=1Voq2nKBZZM HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=r-CLZ__zELO64t4P3fzPIQ&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737245471&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=5D15B8091512A0FED1A2EEFB972A970A60B3B034.BF8B29545F7450A5DE4CD209B403AF500A37EDF8&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Wk7v6ZHIl8I HTTP/1.1" 200 None
+Error collecting video data: name 'collect_video_data' is not defined
+Processing keyword: - Amul India TVC
+Attempting YouTube API request for keyword: - Amul India TVC (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: - Amul India TVC
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=suCLZ9foFJyy9fwPvuyg4A4&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737245474&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=4859A05CB6733990D1E820DA3990A3C4410800F7.56557DC687FC7AE79B2708FC6B335B3D5F047811&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=s3x1HOZuS6E HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=weLf6V3sEOQ HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Y_I1omigDRU HTTP/1.1" 200 None
+No transcript available for video Y_I1omigDRU: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Y_I1omigDRU! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Error collecting video data: name 'collect_video_data' is not defined
+Internal Server Error: /ytscraper/analyze-videos/
+Traceback (most recent call last):
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yyash\Coding\lsm\ytscraper\views.py", line 286, in analyze_videos
+    analysis = generate_comprehensive_analysis(videos_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'generate_comprehensive_analysis' is not defined
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['Amul India TVC', 'Kwality Walls India ad', 'Mother Dairy India TV commercial', 'Vadilal India advertisement', 'Arun Icecreams India commercial']
+Processing keyword: Amul India TVC
+Attempting YouTube API request for keyword: Amul India TVC (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Amul India TVC
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=yOGLZ7iAPYrd3LUP8M-zIA&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737245753&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=3EC076351ED471CB79C3964AB3239DCCEE88245D.17D74FF30B57F34C135A7DED326A1BFB4CEE9CFD&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=s3x1HOZuS6E HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Y_I1omigDRU HTTP/1.1" 200 None
+No transcript available for video Y_I1omigDRU: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Y_I1omigDRU! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=xNWWBEXXtLE HTTP/1.1" 200 None
+No transcript available for video xNWWBEXXtLE: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=xNWWBEXXtLE! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Error collecting video data: name 'get_video_details' is not defined
+Processing keyword: Kwality Walls India ad
+Attempting YouTube API request for keyword: Kwality Walls India ad (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Kwality Walls India ad
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=1Voq2nKBZZM HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=z-GLZ7u2GbDossUP8fHL4QM&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737245759&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=D270EB2391928D69D9BD256E4473D10BA6B1AB06.CDCCAB53642864F82691D6FA86EE3D09143949A6&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Wk7v6ZHIl8I HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=A-qXYMJVgCA HTTP/1.1" 200 None
+No transcript available for video A-qXYMJVgCA: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=A-qXYMJVgCA! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Error collecting video data: name 'get_video_details' is not defined
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream\\n","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['Amul India TVC', "Haldiram's India ad", 'Kwality Walls India commercial', 'Godrej India advertisement', 'Cadbury India TVC', 'Nestle India commercial', 'Hindustan Unilever India ad']
+Processing keyword: Amul India TVC
+Attempting YouTube API request for keyword: Amul India TVC (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Amul India TVC
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=jeKLZ8xngpXi3g_Z84jhDQ&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737245949&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=F103C3139FC86857E2CCE84ABA44D68DD9E2D73C.59E3581670B29F3EA0101D883D04391359B01170&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=s3x1HOZuS6E HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=weLf6V3sEOQ HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Y_I1omigDRU HTTP/1.1" 200 None
+No transcript available for video Y_I1omigDRU: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Y_I1omigDRU! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Error collecting video data: name 'get_video_details' is not defined
+Processing keyword: Haldiram's India ad
+Attempting YouTube API request for keyword: Haldiram's India ad (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Haldiram%27s+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Haldiram's India ad
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=kqZpPAGltvw HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=pk3ixVgRDdM HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=wog8aCXKpGo HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=PqV6XCKhnRc HTTP/1.1" 200 None
+Processing keyword: Kwality Walls India commercial
+Attempting YouTube API request for keyword: Kwality Walls India commercial (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+commercial&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Kwality Walls India commercial
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=1Voq2nKBZZM HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Wk7v6ZHIl8I HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=A-qXYMJVgCA HTTP/1.1" 200 None
+No transcript available for video A-qXYMJVgCA: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=A-qXYMJVgCA! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=iDBuFPltT08 HTTP/1.1" 200 None
+No transcript available for video iDBuFPltT08: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=iDBuFPltT08! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Processing keyword: Godrej India advertisement
+Attempting YouTube API request for keyword: Godrej India advertisement (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Godrej+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Godrej India advertisement
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=oio3JCUhl5Q HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=oio3JCUhl5Q&ei=oOKLZ_W8Oruc4t4Ph5eeqQ0&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737245968&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=9EE17B5D4D45B7FF1FD84E56EEE9DD5AFB3EF334.7DB3E9D43221C2CBCF0C5911047AE64F8B759EAA&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=oio3JCUhl5Q&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=qx07CZwMVDM HTTP/1.1" 200 None
+No transcript available for video qx07CZwMVDM: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=qx07CZwMVDM! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=0GVjNxaTyB4 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=hzNCKIkiTsg HTTP/1.1" 200 None
+Error collecting video data: name 'get_video_details' is not defined
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['Amul India TVC', 'Kwality Walls India advertisement', 'Nestle India commercial', 'Mother Dairy India ad', 'Vadilal India advertising']
+Processing keyword: Amul India TVC
+Attempting YouTube API request for keyword: Amul India TVC (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Amul India TVC
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=0-OLZ47ZKOX1g8UP-J7hwAI&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246275&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=0FAD585FDCCCFD9BE3F661753D55584D791DBAD8.96619F5F81DC09F68858B45939946ADF50087C6D&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=s3x1HOZuS6E HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=weLf6V3sEOQ HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Y_I1omigDRU HTTP/1.1" 200 None
+No transcript available for video Y_I1omigDRU: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Y_I1omigDRU! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=2eOLZ4_0Ao2g9fwPxcbMyQM&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246281&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=5F2445F4F213715FD22059F174A47F1DE9329479.8A79A4B36A301F91E6D63B67141D1ABCCC3BE066&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=XtXJSX71hhg&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Next page request URL: list_next https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=XtXJSX71hhg&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json&pageToken=Z2V0X25ld2VzdF9maXJzdC0tQ2dnSWdBUVZGN2ZST0JJRkNJY2dHQUFTQlFpSklCZ0FFZ1VJblNBWUFSSUZDSWdnR0FBU0JRaW9JQmdBSWc0S0RBakU0Y0NjQmhEb2tmT1lBZw%3D%3D
+Processing keyword: Kwality Walls India advertisement
+Attempting YouTube API request for keyword: Kwality Walls India advertisement (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=Kwality+Walls+India+advertisement&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: Kwality Walls India advertisement
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=s7dbKEMNxLQ HTTP/1.1" 200 None
+No transcript available for video s7dbKEMNxLQ: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=s7dbKEMNxLQ! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=1Voq2nKBZZM HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=3eOLZ6_wF-uT4t4PkuyJsA0&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246285&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=B6C155F54942FB638A6A902832C6937852629DB8.29F00B4FC03469B371E72BE26CB7807D16CB42E7&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Wk7v6ZHIl8I HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=3-OLZ-z9LOO-4t4PuKKNsQ0&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246287&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=11B6758A5EBFA11C569D8A4B85E751926055EF89.097465C7CEE121877C2942FA9F753152D58D690E&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=XtXJSX71hhg&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Next page request URL: list_next https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=XtXJSX71hhg&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json&pageToken=Z2V0X25ld2VzdF9maXJzdC0tQ2dnSWdBUVZGN2ZST0JJRkNJZ2dHQUFTQlFpSElCZ0FFZ1VJaVNBWUFCSUZDSjBnR0FFU0JRaW9JQmdBSWc0S0RBakU0Y0NjQmhEb2tmT1lBZw%3D%3D
+C:\Users\yyash\Coding\lsm\ytscraper\views.py changed, reloading.
+Watching for file changes with StatReloader
+file_cache is only supported with oauth2client<4.0.0
+Not Found: /favicon.ico
+Received search request: b'{"product_description":"icecream","total_videos":"2"}'
+Generating keywords...
+Generated keywords: ['- Amul India TVC', '- Cadbury India ad', '- Kwality Walls India commercial', '- Mother Dairy India advertisement', '- Vadilal India commercial']
+Processing keyword: - Amul India TVC
+Attempting YouTube API request for keyword: - Amul India TVC (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Amul+India+TVC&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: - Amul India TVC
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=YeWLZ8fjLrCAjuMP4vy6yA0&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246673&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=05B35C5C817C2B934192744E0F88B4B55D289F63.855C12C2E29B8D105814C10ABCE20247BE809AC4&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=s3x1HOZuS6E HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=weLf6V3sEOQ HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=Y_I1omigDRU HTTP/1.1" 200 None
+No transcript available for video Y_I1omigDRU: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=Y_I1omigDRU! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=XtXJSX71hhg&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=XtXJSX71hhg HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=XtXJSX71hhg&ei=aeWLZ4XjJf7tg8UPvv-JyAM&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246681&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=585C66A7143216102FE92FC7BB030F84F43A345C.97D7E69C5DEFE6A1A9DFD89ABBA8CA6776572E06&key=yt8&lang=en&name=NPTEL+Official HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=XtXJSX71hhg&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Next page request URL: list_next https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=XtXJSX71hhg&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json&pageToken=Z2V0X25ld2VzdF9maXJzdC0tQ2dnSWdBUVZGN2ZST0JJRkNJY2dHQUFTQlFpb0lCZ0FFZ1VJaUNBWUFCSUZDSWtnR0FBU0JRaWRJQmdCSWc0S0RBakU0Y0NjQmhEb2tmT1lBZw%3D%3D
+Processing keyword: - Cadbury India ad
+Attempting YouTube API request for keyword: - Cadbury India ad (attempt 1)
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/search?q=-+Cadbury+India+ad&part=id%2Csnippet&maxResults=4&type=video&videoDuration=short&order=viewCount&videoDefinition=high&regionCode=IN&relevanceLanguage=en&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Successfully retrieved search results for: - Cadbury India ad
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=uAiapBnFsKs HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=uAiapBnFsKs&ei=bOWLZ_29JMzd3LUPq_OU6QM&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246684&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=AEA243513C60523B962CCF7D313D27A644E0578F.AAF6EAB214CA072863756614080E83F26949D08C&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=uAiapBnFsKs&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=ugp1IhxHT48 HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=2a9A2eB5dCc HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=RlkRupC_sHo HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=RlkRupC_sHo&ei=b-WLZ4DVNvKV4t4P6YGn-AI&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246687&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=2424D0A9A18B498A35C3541B24D4104710311186.DF946D5D8272B3F2D8896BDDEA563B1D5D09245A&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=statistics%2CcontentDetails&id=RlkRupC_sHo&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=uAiapBnFsKs&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=uAiapBnFsKs HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=uAiapBnFsKs&ei=ceWLZ4qyNae54t4Pnv2MmQI&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246689&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=37BE94985DBD6B6B4C1996C66E19D40404B2C0BE.776FDB46E70F0DA0BB1E1478EAA41C85058F97BC&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=uAiapBnFsKs&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=RlkRupC_sHo&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /watch?v=RlkRupC_sHo HTTP/1.1" 200 None
+Starting new HTTPS connection (1): www.youtube.com:443
+https://www.youtube.com:443 "GET /api/timedtext?v=RlkRupC_sHo&ei=c-WLZ4zzHr3a3LUPsvD_-Ag&caps=asr&opi=112496729&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1737246691&sparams=ip,ipbits,expire,v,ei,caps,opi,xoaf&signature=6678A2119C8092F5B48ED0542F96DCE48D22B644.1F193003337A153EC2FDEFFD1520B99864D8E5E1&key=yt8&kind=asr&lang=en HTTP/1.1" 200 None
+URL being requested: GET https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=RlkRupC_sHo&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json
+Next page request URL: list_next https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=RlkRupC_sHo&maxResults=100&textFormat=plainText&key=AIzaSyDrWdwkQZixaa-Pm4DqXJoGcDlWaJbsL80&alt=json&pageToken=Z2V0X25ld2VzdF9maXJzdC0tQ2dnSWdBUVZGN2ZST0JJRkNLZ2dHQUFTQlFpSUlCZ0FFZ1VJaVNBWUFCSUZDSWNnR0FBU0JRaWRJQmdCSWcwS0N3ak02YjZDQmhDbzlQRnU%3D

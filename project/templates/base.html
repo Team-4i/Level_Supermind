@@ -1,0 +1,906 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr,de,it,pt,ru,zh-CN,ja,ko',
+                layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT,
+                autoDisplay: false,
+                multilanguagePage: true
+            }, 'google_translate_element');
+        }
+
+        function changeLanguage(langCode) {
+            if (langCode) {
+                localStorage.setItem('preferredLanguage', langCode);
+                var select = document.querySelector('.goog-te-combo');
+                if (select) {
+                    select.value = langCode;
+                    select.dispatchEvent(new Event('change'));
+                }
+                document.querySelector('.custom-translate-select').value = langCode;
+            }
+        }
+
+        function restoreLanguage() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                let attempts = 0;
+                const checkGoogleTranslate = setInterval(function() {
+                    const select = document.querySelector('.goog-te-combo');
+                    if (select) {
+                        changeLanguage(savedLang);
+                        clearInterval(checkGoogleTranslate);
+                    }
+                    attempts++;
+                    if (attempts > 20) clearInterval(checkGoogleTranslate);
+                }, 100);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            restoreLanguage();
+        });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+        /* Add other CSS rules as required */
+    </style>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+    <!-- Sidebar -->
+ <!-- Sidebar -->
+<!-- Sidebar -->
+<section id="sidebar">
+    <a href="#" class="brand">
+        <i class='bx bxs-smile'></i>
+        <span class="text">ART Finder</span>
+    </a>
+    <ul class="side-menu top">
+        <li class="{% if request.path == '/home/' %}active{% endif %}">
+            <a href="/home/">
+                <i class='bx bxs-dashboard'></i>
+                <span class="text">Dashboard</span>
+            </a>
+        </li>
+        <li class="{% if request.path == '/ytscraper/scraper-home/' or request.path == '/ytscraper/' %}active{% endif %}">
+            <a href="/ytscraper/scraper-home/">
+                <i class='bx bxs-group'></i>
+                <span class="text">YT Scraper</span>
+            </a>
+        </li>
+        <li class="{% if request.path == '/webscraper/' or request.path == '/webscraper/new/' %}active{% endif %}">
+            <a href="/webscraper/new/">
+                <i class='bx bxs-group'></i>
+                <span class="text">Web Scraper</span>
+            </a>
+        </li>
+        <li class="{% if '/users/art/' in request.path %}active{% endif %}">
+            <a href="{% url 'users:art_list' %}">
+                <i class='bx bxs-analyse'></i>
+                <span class="text">My Analysis</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="side-menu">
+        <li class="{% if request.path == '/users/profile/edit/' or request.path == '/users/profile/' %}active{% endif %}">
+            <a href="{% url 'users:profile_edit' %}">
+                <i class='bx bxs-user-detail'></i>
+                <span class="text">Edit Profile</span>
+            </a>
+        </li>
+        <li>
+            <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="logout" style="background: none; border: none; color: inherit; cursor: pointer;">
+                    <i class='bx bx-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </button>
+            </form>
+        </li>
+    </ul>
+</section>
+
+
+    <!-- SIDEBAR -->
+    
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav >
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <a href="#" class="notification">
+                <i class='bx bxs-bell'></i>
+                <span class="num">1</span>
+            </a>
+            <div class="translate-container">
+                <div id="google_translate_element" style="display:none;"></div>
+                <select class="custom-translate-select" onchange="changeLanguage(this.value)">
+                    <option value="">Select Language</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                    <option value="zh-CN">中文</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                </select>
+            </div>
+            <a href="#" class="profile">
+                <div class="profile-container">
+                    <h1>{{ user.username }}!</h1>
+                    <div class="profile-dropdown">
+                        <p>Email: {{ user.email }}</p>
+                        <p>Company: {{ user.profile.company_name }}</p>
+                        <p>Industry: {{ user.profile.industry }}</p>
+                        <a href="{% url 'users:profile_edit' %}" class="dropdown-link">Edit Profile</a>
+                    </div>
+                </div>
+            </a>
+        </nav>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <script>
+        const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+    
+        allSideMenu.forEach(item => {
+            const li = item.parentElement;
+    
+            item.addEventListener('click', function () {
+                allSideMenu.forEach(i => {
+                    i.parentElement.classList.remove('active');
+                });
+                li.classList.add('active');
+            });
+        });
+    
+        // TOGGLE SIDEBAR
+        const menuBar = document.querySelector('#content nav .bx.bx-menu');
+        const sidebar = document.getElementById('sidebar');
+    
+        menuBar.addEventListener('click', function () {
+            sidebar.classList.toggle('hide');
+        });
+    
+        const searchButton = document.querySelector('#content nav form .form-input button');
+        const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
+        const searchForm = document.querySelector('#content nav form');
+    
+        searchButton.addEventListener('click', function (e) {
+            if (window.innerWidth < 576) {
+                e.preventDefault();
+                searchForm.classList.toggle('show');
+                if (searchForm.classList.contains('show')) {
+                    searchButtonIcon.classList.replace('bx-search', 'bx-x');
+                } else {
+                    searchButtonIcon.classList.replace('bx-x', 'bx-search');
+                }
+            }
+        });
+    
+        if (window.innerWidth < 768) {
+            sidebar.classList.add('hide');
+        } else if (window.innerWidth > 576) {
+            searchButtonIcon.classList.replace('bx-x', 'bx-search');
+            searchForm.classList.remove('show');
+        }
+    
+        window.addEventListener('resize', function () {
+            if (this.innerWidth > 576) {
+                searchButtonIcon.classList.replace('bx-x', 'bx-search');
+                searchForm.classList.remove('show');
+            }
+        });
+    
+        const switchMode = document.getElementById('switch-mode');
+    
+        switchMode.addEventListener('change', function () {
+            if (this.checked) {
+                document.body.classList.add('dark');
+            } else {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --lato: "Lato", sans-serif;
+
+  --light: #f9f9f9;
+  --blue: #3c91e6;
+  --light-blue: #cfe8ff;
+  --grey: #eee;
+  --dark-grey: #aaaaaa;
+  --dark: #342e37;
+  --red: #db504a;
+  --yellow: #ffce26;
+  --light-yellow: #fff2c6;
+  --orange: #fd7238;
+  --light-orange: #ffe0d3;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body.dark {
+  --light: #0c0c1e;
+  --grey: #060714;
+  --dark: #fbfbfb;
+}
+
+body {
+  background: var(--grey);
+  overflow-x: hidden;
+}
+
+/* SIDEBAR */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100%;
+  background: var(--light);
+  z-index: 2000;
+  font-family: var(--lato);
+  transition: 0.3s ease;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+#sidebar::--webkit-scrollbar {
+  display: none;
+}
+#sidebar.hide {
+  width: 60px;
+}
+#sidebar .brand {
+  font-size: 24px;
+  font-weight: 700;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--light);
+  z-index: 500;
+  padding-bottom: 20px;
+  box-sizing: content-box;
+}
+#sidebar .brand .bx {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+}
+#sidebar .brand .text {
+
+}
+#sidebar .side-menu {
+  width: 100%;
+  margin-top: 48px;
+}
+#sidebar .side-menu li {
+  height: 48px;
+  background: transparent;
+  margin-left: 6px;
+  border-radius: 48px 0 0 48px;
+  padding: 4px;
+}
+#sidebar .side-menu li.active {
+  background: var(--grey);
+  position: relative;
+}
+#sidebar .side-menu li.active::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -40px;
+  right: 0;
+  box-shadow: 20px 20px 0 var(--grey);
+  z-index: -1;
+}
+#sidebar .side-menu li.active::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  bottom: -40px;
+  right: 0;
+  box-shadow: 20px -20px 0 var(--grey);
+  z-index: -1;
+}
+#sidebar .side-menu li a {
+  width: 100%;
+  height: 100%;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  border-radius: 48px;
+  font-size: 16px;
+  color: var(--dark);
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+#sidebar .side-menu.top li.active a {
+  color: var(--blue);
+}
+#sidebar.hide .side-menu li a {
+  width: calc(48px - (4px * 2));
+  transition: width 0.3s ease;
+}
+#sidebar .side-menu li a.logout {
+  color: var(--red);
+}
+#sidebar .side-menu.top li a:hover {
+  color: var(--blue);
+}
+#sidebar .side-menu li a .bx {
+  min-width: calc(60px - ((4px + 6px) * 2));
+  display: flex;
+  justify-content: center;
+}
+#sidebar.hide .side-menu li .logout {
+  display: flex;
+  justify-content: center;
+}
+
+#sidebar.hide .side-menu li .logout .text {
+  display: none;
+}
+
+/* SIDEBAR */
+
+/* CONTENT */
+#content {
+  position: relative;
+  width: calc(100% - 230px);
+  left: 230px;
+  transition: 0.3s ease;
+}
+#sidebar.hide ~ #content {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+/* NAVBAR */
+#content nav {
+  height: 56px;
+  background: var(--light);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  font-family: var(--lato);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#content nav::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: -40px;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: -20px -20px 0 var(--light);
+}
+#content nav a {
+  color: var(--dark);
+}
+#content nav .bx.bx-menu {
+  cursor: pointer;
+  color: var(--dark);
+}
+#content nav .nav-link {
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+#content nav .nav-link:hover {
+  color: var(--blue);
+}
+#content nav form {
+  max-width: 400px;
+  width: 100%;
+  margin-right: auto;
+}
+#content nav form .form-input {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+#content nav form .form-input input {
+  flex-grow: 1;
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  background: var(--grey);
+  border-radius: 36px 0 0 36px;
+  outline: none;
+  width: 100%;
+  color: var(--dark);
+}
+#content nav form .form-input button {
+  width: 36px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue);
+  color: var(--light);
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 0 36px 36px 0;
+  cursor: pointer;
+}
+#content nav .notification {
+  font-size: 20px;
+  position: relative;
+}
+#content nav .notification .num {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--light);
+  background: var(--red);
+  color: var(--light);
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content nav .profile img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#content nav .switch-mode {
+  display: block;
+  min-width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background: var(--grey);
+  cursor: pointer;
+  position: relative;
+}
+#content nav .switch-mode::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: calc(25px - 4px);
+  background: var(--blue);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+#content nav #switch-mode:checked + .switch-mode::before {
+  left: calc(100% - (25px - 4px) - 2px);
+}
+/* NAVBAR */
+
+/* MAIN */
+#content main {
+  width: 100%;
+  padding: 20px 24px;
+  font-family: var(--poppins);
+  max-height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+#content main .head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 16px;
+  flex-wrap: wrap;
+}
+#content main .head-title .left h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+#content main .head-title .left .breadcrumb {
+  display: flex;
+  align-items: center;
+  grid-gap: 16px;
+}
+#content main .head-title .left .breadcrumb li {
+  color: var(--dark);
+}
+#content main .head-title .left .breadcrumb li a {
+  color: var(--dark-grey);
+  pointer-events: none;
+}
+#content main .head-title .left .breadcrumb li a.active {
+  color: var(--blue);
+  pointer-events: unset;
+}
+#content main .head-title .btn-download {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 36px;
+  background: var(--blue);
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  font-weight: 500;
+}
+
+#content main .box-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 24px;
+  
+}
+#content main .box-info li {
+  padding: 24px;
+  background: var(--light);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+}
+#content main .box-info li .bx {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content main .box-info li:nth-child(1) .bx {
+  background: var(--light-blue);
+  color: var(--blue);
+}
+#content main .box-info li:nth-child(2) .bx {
+  background: var(--light-yellow);
+  color: var(--yellow);
+}
+#content main .box-info li:nth-child(3) .bx {
+  background: var(--light-orange);
+  color: var(--orange);
+}
+#content main .box-info li .text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+}
+#content main .box-info li .text p {
+  color: var(--dark);
+}
+
+/* MAIN */
+/* CONTENT */
+
+@media screen and (max-width: 768px) {
+  #sidebar {
+    width: 200px;
+  }
+
+  #content {
+    width: calc(100% - 60px);
+    left: 200px;
+  }
+
+  #content nav .nav-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #content nav form .form-input input {
+    display: none;
+  }
+
+  #content nav form .form-input button {
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: none;
+    color: var(--dark);
+  }
+
+  #content nav form.show .form-input input {
+    display: block;
+    width: 100%;
+  }
+  #content nav form.show .form-input button {
+    width: 36px;
+    height: 100%;
+    border-radius: 0 36px 36px 0;
+    color: var(--light);
+    background: var(--red);
+  }
+
+  #content nav form.show ~ .notification,
+  #content nav form.show ~ .profile {
+    display: none;
+  }
+
+  #content main .box-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    color: #e63946; /* Replace with your color choice */
+}
+
+.logout i {
+    min-width: calc(60px - ((4px + 6px) * 2));
+    display: flex;
+    justify-content: center;
+    color: var(--red); /* Icon color */
+    font-size: 18px; /* Adjust size to match */
+}
+
+.logout span {
+    font-size: 16px;
+    color: #e63946; /* Text color */
+    font-weight: bold;
+}
+
+
+
+
+/* Students List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.student-item {
+    position: relative; /* Necessary for dropdown positioning */
+    margin: 5px auto; /* Vertical margin and horizontal auto */
+    padding: 5px; /* Padding */
+    background-color: var(--light-blue); /* Light background for student items */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1; /* Ensure student items don't overlap each other */
+    width: 50%; /* Set a specific width for alignment */
+    text-align: left; /* Center text inside the item */
+}
+
+
+.student-item:hover {
+    background-color: #e6f7ff; /* Slightly darker on hover */
+    background-color: dark;
+    transform: scale(1.02); /* Slight scaling effect */
+    z-index: 10; /* Elevate the hovered item above others */
+}
+
+.dropdown {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    position: absolute;
+    left: 100%; /* Position to the right of the student name */
+    top: 0;
+    width: 200px; /* Adjust width as needed */
+    z-index: 100; /* Ensure it overlays other elements */
+}
+
+.student-item:hover .dropdown {
+    display: block;
+}
+
+/* For text inside the dropdown */
+.dropdown p {
+    margin: 5px 0; /* Reduce the margin */
+    font-size: 14px; /* Adjust font size to reduce space */
+}
+
+
+.student-item a {
+    text-decoration: none;
+    color: #333; /* Dark text color */
+    font-weight: bold;
+}
+
+
+.dropdown strong {
+    display: block; /* Make the header stand out */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .student-item {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .dropdown {
+        width: 90%; /* Make dropdown take more width on smaller screens */
+    }
+}
+
+.profile-container {
+    position: relative;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--light);
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.profile-container:hover .profile-dropdown {
+    display: block;
+}
+
+.profile-dropdown p {
+    margin: 8px 0;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.dropdown-link {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background: var(--blue);
+    color: var(--light) !important;
+    text-align: center;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.dropdown-link:hover {
+    background: var(--light-blue);
+    color: var(--blue) !important;
+}
+
+/* Updated Google Translate Styles */
+.translate-container {
+    margin: 0 15px;
+    position: relative;
+}
+
+.custom-translate-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--light);
+    border: 1px solid var(--grey);
+    padding: 8px 32px 8px 12px;
+    border-radius: 4px;
+    font-family: var(--poppins);
+    font-size: 14px;
+    color: var(--dark);
+    cursor: pointer;
+    width: auto;
+    min-width: 160px;
+}
+
+.custom-translate-select:hover {
+    border-color: var(--blue);
+}
+
+.custom-translate-select:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 2px rgba(60, 145, 230, 0.1);
+}
+
+.translate-container::after {
+    content: '\25BC';
+    font-size: 12px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--dark);
+}
+
+/* Hide Google Translate Elements */
+.goog-te-banner-frame,
+.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+/* Dark mode support */
+body.dark .custom-translate-select {
+    background-color: var(--dark);
+    color: var(--light);
+    border-color: var(--grey);
+}
+
+body.dark .translate-container::after {
+    color: var(--light);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .custom-translate-select {
+        min-width: 120px;
+        padding: 6px 28px 6px 8px;
+        font-size: 13px;
+    }
+}
+</style>
+</body>
+</html>

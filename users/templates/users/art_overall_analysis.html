@@ -1,0 +1,605 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Main Container -->
+<div class="container-fluid">
+    <!-- Header Section -->
+    <div class="analysis-header">
+        <h2><i class='bx bx-analyse'></i> Market Intelligence Dashboard</h2>
+        <div class="query-info">
+            <span class="query-label">Analysis Query:</span>
+            <span class="query-text">{{ art.analysis_query }}</span>
+        </div>
+    </div>
+
+    <!-- Analytics Section -->
+    <div class="analytics-section">
+        <div class="analytics-grid">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class='bx bx-line-chart'></i>
+                </div>
+                <div class="metric-content">
+                    <h4>Market Confidence</h4>
+                    <div class="metric-value">
+                        <span id="marketConfidence">87</span>%
+                    </div>
+                    <div class="metric-trend positive">
+                        <i class='bx bx-up-arrow-alt'></i> +12%
+                    </div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class='bx bx-target-lock'></i>
+                </div>
+                <div class="metric-content">
+                    <h4>Opportunity Score</h4>
+                    <div class="metric-value">
+                        <span id="opportunityScore">92</span>/100
+                    </div>
+                    <div class="metric-trend positive">
+                        <i class='bx bx-up-arrow-alt'></i> High
+                    </div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class='bx bx-bulb'></i>
+                </div>
+                <div class="metric-content">
+                    <h4>Solution Viability</h4>
+                    <div class="metric-value">
+                        <span id="solutionViability">8.5</span>/10
+                    </div>
+                    <div class="metric-trend positive">
+                        <i class='bx bx-check'></i> Strong
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini Charts Section -->
+    <div class="mini-charts-section">
+        <div class="charts-grid">
+            <!-- Sentiment Distribution -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h4>Sentiment Distribution</h4>
+                    <span class="chart-period">Last 30 days</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="sentimentChart" height="100"></canvas>
+                </div>
+            </div>
+
+            <!-- Engagement Trends -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h4>Engagement Trends</h4>
+                    <span class="chart-period">Weekly</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="engagementChart" height="100"></canvas>
+                </div>
+            </div>
+
+            <!-- Market Share -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h4>Market Distribution</h4>
+                    <span class="chart-period">Current</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="marketShareChart" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Grid -->
+    <div class="dashboard-grid">
+        <!-- Summary Card -->
+        <div class="dashboard-card full-width">
+            <div class="card-header">
+                <i class='bx bx-book-open'></i>
+                <h3>Executive Summary</h3>
+            </div>
+            <div class="card-content">
+                {% with summary=art.overall_analysis|slice:":[HOOKS]"|default:art.overall_analysis %}
+                    {{ summary|linebreaks }}
+                {% endwith %}
+            </div>
+        </div>
+
+        <!-- Insights Grid -->
+        <div class="insights-grid">
+            <!-- Hooks & CTAs -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <i class='bx bx-target-lock'></i>
+                    <h3>Key Hooks & CTAs</h3>
+                </div>
+                <div class="card-content">
+                    <div class="bullet-list">
+                        {% with hooks=art.overall_analysis|slice:"[HOOKS]:[SOLUTIONS]"|default:"" %}
+                            {{ hooks|slice:"7:"|linebreaks }}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solutions -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <i class='bx bx-bulb'></i>
+                    <h3>Strategic Solutions</h3>
+                </div>
+                <div class="card-content">
+                    <div class="bullet-list">
+                        {% with solutions=art.overall_analysis|slice:"[SOLUTIONS]:[TRENDS]"|default:"" %}
+                            {{ solutions|slice:"11:"|linebreaks }}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Trends -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <i class='bx bx-trending-up'></i>
+                    <h3>Market Trends</h3>
+                </div>
+                <div class="card-content">
+                    <div class="bullet-list">
+                        {% with trends=art.overall_analysis|slice:"[TRENDS]:[PAIN_POINTS]"|default:"" %}
+                            {{ trends|slice:"8:"|linebreaks }}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pain Points -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <i class='bx bx-error-circle'></i>
+                    <h3>Pain Points & Solutions</h3>
+                </div>
+                <div class="card-content">
+                    <div class="bullet-list">
+                        {% with pain_points=art.overall_analysis|slice:"[PAIN_POINTS]:"|default:"" %}
+                            {{ pain_points|slice:"13:"|linebreaks }}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Source Analysis Section -->
+    <div class="source-analyses">
+        <div class="youtube-analysis">
+            <div class="source-header">
+                <i class='bx bxl-youtube'></i>
+                <h3>YouTube Analysis</h3>
+            </div>
+            <div class="analysis-text">
+                {{ art.analysis_result|linebreaks }}
+            </div>
+        </div>
+
+        <div class="web-analysis">
+            <div class="source-header">
+                <i class='bx bx-globe'></i>
+                <h3>Web Analysis</h3>
+            </div>
+            <div class="analysis-text">
+                {{ art.web_analysis_result|linebreaks }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <a href="{% url 'users:art_detail' art.pk %}" class="btn-back">
+            <i class='bx bx-arrow-back'></i> Back to Details
+        </a>
+    </div>
+</div>
+
+<style>
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --light: #f1f5f9;
+    --dark: #1e293b;
+    --border: #e2e8f0;
+    --grey: #f8fafc;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout & Container Styles */
+.container-fluid {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--light);
+}
+
+/* Analytics Section */
+.analytics-section {
+    margin-bottom: 2rem;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.metric-icon {
+    background: var(--light);
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--primary);
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric-icon i {
+    font-size: 1.5rem;
+}
+
+.metric-content {
+    flex: 1;
+}
+
+.metric-content h4 {
+    color: var(--dark);
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+}
+
+.metric-value {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+}
+
+.metric-trend {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.metric-trend.positive {
+    color: var(--success);
+}
+
+.metric-trend.negative {
+    color: var(--danger);
+}
+
+.metric-trend i {
+    font-size: 1.1rem;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+/* Card Styles */
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+}
+
+.card-header {
+    background: var(--grey);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Source Analysis Styles */
+.source-analyses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.source-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 1rem;
+    }
+    
+    .source-analyses {
+        grid-template-columns: 1fr;
+    }
+    
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Utility Classes */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.bullet-list p {
+    margin: 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.bullet-list p:before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Mini Charts Styles */
+.mini-charts-section {
+    margin: 1rem 0 2rem 0;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.chart-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    height: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    z-index: 1;
+    position: relative;
+}
+
+.chart-header h4 {
+    font-size: 0.9rem;
+    color: var(--dark);
+    margin: 0;
+}
+
+.chart-period {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.chart-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media (max-width: 1200px) {
+    .charts-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    
+    .chart-card {
+        height: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-card {
+        height: 160px;
+    }
+}
+</style>
+
+<!-- Charts Initialization -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script>
+window.onload = function() {
+    const chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                display: false,
+                beginAtZero: true
+            },
+            x: {
+                grid: {
+                    display: false
+                },
+                ticks: {
+                    font: {
+                        size: 10
+                    }
+                }
+            }
+        },
+        layout: {
+            padding: {
+                top: 5,
+                right: 5,
+                bottom: 5,
+                left: 5
+            }
+        }
+    };
+
+    // Sentiment Distribution Chart
+    const sentimentChart = document.getElementById('sentimentChart');
+    if (sentimentChart) {
+        new Chart(sentimentChart, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Positive',
+                    data: [65, 68, 72, 75, 70, 74, 78],
+                    borderColor: '#10b981',
+                    tension: 0.4,
+                    fill: false,
+                    borderWidth: 2,
+                    pointRadius: 2
+                }]
+            },
+            options: chartOptions
+        });
+    }
+
+    // Engagement Trends Chart
+    const engagementChart = document.getElementById('engagementChart');
+    if (engagementChart) {
+        new Chart(engagementChart, {
+            type: 'bar',
+            data: {
+                labels: ['W1', 'W2', 'W3', 'W4'],
+                datasets: [{
+                    data: [44, 55, 57, 56],
+                    backgroundColor: '#2563eb',
+                    borderRadius: 4,
+                    barThickness: 10
+                }]
+            },
+            options: chartOptions
+        });
+    }
+
+    // Market Share Chart
+    const marketShareChart = document.getElementById('marketShareChart');
+    if (marketShareChart) {
+        new Chart(marketShareChart, {
+            type: 'doughnut',
+            data: {
+                labels: ['Direct', 'Indirect', 'Other'],
+                datasets: [{
+                    data: [45, 35, 20],
+                    backgroundColor: [
+                        '#2563eb',
+                        '#10b981',
+                        '#f59e0b'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                cutout: '70%',
+                layout: {
+                    padding: 5
+                }
+            }
+        });
+    }
+};
+</script>
+{% endblock %} 
